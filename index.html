@@ -4,19 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/2855cb934d.js" crossorigin="anonymous">
+    </script>
     <title>Cinnamon Weather</title>
+    <link rel="stylesheet" href="src/styles.css"/>
   </head>
   <body>
-    <div>
-      <h1>Cinnamon Weather</h1>
-    </div>
+    <div class="container">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <form class="d-flex" role="search" id="search-form">
+            <input
+              class="form-control me-2"
+              type="search"
+              aria-label="Search"
+              id="search-text-input"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+           <button type="button" class="btn btn-danger" id="current-location-button">
+              Current
+            </button>
+          </form>
+      </nav>
+      <div class="row">
+            <div class="col-5">
+              <h2>Forecast</h2>
+              <ul class="list-group">
+                <li class="list-group-item">Tomorrow <br /> 19°C <i class="fa-solid fa-cloud-sun"></i></li>
+                <li class="list-group-item">Saturday <br /> 16°C <i class="fa-solid fa-cloud-rain"></i></li>
+                <li class="list-group-item">Sunday <br /> 24°C <i class="fa-solid fa-sun"></i></li>
+                <li class="list-group-item">Monday <br /> 25°C <i class="fa-solid fa-sun"></i></li>
+                <li class="list-group-item">Tuesday <br /> 26°C <i class="fa-solid fa-sun"></i></li>
+               </ul>
+            </div>
+            <div class="col-7">
+              <h1 id="city-name">Kyiv</h1>
+              <p>
+                  May 19, 2022
+                  <br />
+                  20:00
+              </p>
+              <h3 id="temperature"><h1 id="weather-symbol"></h3>
+                <ul class="list-group">
+                    <li class="list-group-item" id="wind-speed">Wind</li>
+                    <li class="list-group-item" id="humidity-level">Humidity</li>
+               </ul>
+
+            </div>
+          </div>
+       </div>
+    <footer>
+    <a href="https://github.com/Lisa-Bond/weather-app-shecodes" target="_blank" class="community">Open-source code</a> by Lisa Bondarenko
+  </footer>
+      </div>
     <script src="src/script.js"></script>
   </body>
 </html>
