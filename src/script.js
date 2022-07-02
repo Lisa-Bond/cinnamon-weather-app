@@ -67,17 +67,17 @@ function getCurrentLocation(event) {
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("#city-name");
-  h1.innerHTML = response.data.name;
   let h3 = document.querySelector("#temperature");
-  h3.innerHTML = `${temperature}°C`;
   let humidity = document.querySelector("#humidity-level");
-  humidity.innerHTML = `Humidity ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
+  h1.innerHTML = response.data.name;
+  h3.innerHTML = `${temperature}°C`;
+  humidity.innerHTML = `Humidity ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind ${Math.round(response.data.wind.speed)} km/h`;
   document.querySelector(
     "#weather-symbol"
   ).innerHTML = `${response.data.weather[0].main}`;
-  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -85,6 +85,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 

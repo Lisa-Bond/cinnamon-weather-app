@@ -45,6 +45,10 @@ footer {
 .condition-item {
   list-style: none;
 }
+.list-group-item {
+  border: none;
+  text-align: left;
+}
 #weather-symbol {
   font-size: 20px;
 }
