@@ -1,6 +1,6 @@
 h1 {
-  font-size: 50px;
-  text-align: left;
+  font-size: 60px;
+  text-align: center;
 }
 h2 {
   font-size: 24px;
@@ -12,8 +12,8 @@ li {
   text-align: center;
 }
 p {
-  text-align: left;
-  font-size: 12px;
+  text-align: center;
+  font-size: 14px;
 }
 button {
   margin: 10px;
@@ -29,6 +29,21 @@ footer {
 }
 .row {
   padding: 20px;
+}
+.block1 {
+  display: block;
+  float: right;
+}
+.block2 {
+  display: block;
+  float: left;
+}
+.condition {
+  scroll-padding: 20px;
+  margin: 50px;
+}
+.condition-item {
+  list-style: none;
 }
 #weather-symbol {
   font-size: 20px;
