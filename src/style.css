@@ -4,6 +4,7 @@ h1 {
 }
 h2 {
   font-size: 24px;
+  text-align: center;
 }
 h3 {
   font-size: 50px;
@@ -23,7 +24,7 @@ footer {
   font-size: 14px;
 }
 .container {
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 10px;
 }
@@ -39,8 +40,8 @@ footer {
   float: left;
 }
 .condition {
-  scroll-padding: 20px;
-  margin: 50px;
+  padding: 20px;
+  margin: 20px;
 }
 .condition-item {
   list-style: none;
@@ -48,6 +49,7 @@ footer {
 .list-group-item {
   border: none;
   text-align: right;
+  font-size: 14px;
 }
 .weather-forecast-temperature-min {
   opacity: 0.5;

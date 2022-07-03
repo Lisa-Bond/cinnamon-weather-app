@@ -25,6 +25,7 @@
               class="form-control me-2"
               type="search"
               aria-label="Search"
+              placeholder="Enter location"
               id="search-text-input"
             />
             <button class="btn btn-outline-success" type="submit">
@@ -36,22 +37,12 @@
           </form>
       </nav>
            <div class="row">
-              <div class="col-4" id="weather-forecast">
+              <div class="col-5">
               <h2>Forecast</h2>
-              <ul class="list-group">
-                <li class="list-group-item">Tomorrow <br /> <span class="weather-forecast-temperature-max">19°</span>
-                  <span class="weather-forecast-temperature-min"> 14°C </span><i class="fa-solid fa-cloud-sun"></i></li>
-                <li class="list-group-item">Saturday <br /> <span class="weather-forecast-temperature-max">19°</span>
-                  <span class="weather-forecast-temperature-min"> 14°C </span> <i class="fa-solid fa-cloud-rain"></i></li>
-                <li class="list-group-item">Sunday <br /> <span class="weather-forecast-temperature-max">19°</span>
-                  <span class="weather-forecast-temperature-min"> 14°C </span> <i class="fa-solid fa-sun"></i></li>
-                <li class="list-group-item">Monday <br /> <span class="weather-forecast-temperature-max">19°</span>
-                  <span class="weather-forecast-temperature-min"> 14°C </span> <i class="fa-solid fa-sun"></i></li>
-                <li class="list-group-item">Tuesday <br /> <span class="weather-forecast-temperature-max">19°</span>
-                  <span class="weather-forecast-temperature-min"> 14°C </span> <i class="fa-solid fa-sun"></i></li>
-               </ul>
+              <div id="weather-forecast">
+              </div>
             </div>
-            <div class="col-8">
+            <div class="col-7">
               <h1 id="city-name">Kyiv</h1>
               <p>
                   May 19, 2022
@@ -67,12 +58,12 @@
                 <img alt="Overcast" id="icon" class="block1" />
                 <h3 id="temperature"><h1 id="weather-symbol" class="block2"></h3>
               </div>
-              <div class="condition">
+              <p class="condition">
                 <ul>
                   <li class="condition-item" id="wind-speed">Wind</li>
                   <li class="condition-item" id="humidity-level">Humidity</li>
                 </ul>
-              </div>
+              </p>
             </div>
           </div>
        </div>
