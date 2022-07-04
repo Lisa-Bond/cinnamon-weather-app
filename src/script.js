@@ -116,19 +116,21 @@ let celsiusTemperature = null;
 searchCity("Kyiv");
 displayForecast();
 
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
-  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
   let forecastHTML = `<div class="col">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
    <ul class="list-group">
-    <li class="list-group-item">${day} <br /><span class="weather-forecast-temperature-max">219° </span>
-      <span class="weather-forecast-temperature-min"> 124°C </span>
+    <li class="list-group-item">${forecastDay.dt} <br />
+    <span class="weather-forecast-temperature-max">${forecastDay.temp.max}° </span>
+      <span class="weather-forecast-temperature-min">${forecastDay.temp.min}°C </span>
       <img
-        src="http://openweathermap.org/img/wn/50d@2x.png"
+        src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
         alt=""
         width="25">
     </li>
