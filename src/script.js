@@ -68,10 +68,10 @@ function displayForecast(response) {
         `
    <ul class="list-group">
     <li class="list-group-item">${formatDay(forecastDay.dt)} <br />
-    <span class="weather-forecast-temperature-max">${Math.round(
+    <span class="weather-forecast-temperature-max">↑${Math.round(
       forecastDay.temp.max
     )}° </span>
-      <span class="weather-forecast-temperature-min">${Math.round(
+      <span class="weather-forecast-temperature-min"> ↓${Math.round(
         forecastDay.temp.min
       )}°C </span>
       <img
